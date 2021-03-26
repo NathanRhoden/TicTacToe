@@ -48,8 +48,9 @@ public class Main {
                     myObj[4][4] = 'X';
                     break;
 
-            } // CASES TO INSERT X AT THE PLAYERS CHOICE LOCATION
-            GameBoard.printGameBoard(myObj); // PRINTS OUT THE UPDATED GAMEBOARD
+            }
+
+            CheckStatus.winingCombo(myObj);
         }
 
 
