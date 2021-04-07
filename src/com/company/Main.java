@@ -13,13 +13,19 @@ public class Main {
         int upperbound = 10;
 
         char[][] myObj = GameBoard.board(); // OBJ OF THE BOARD
+
+        int[] cc = {1,2,3,4,5,6,7,8,9};
+
         while(true) {
 
 
-            GameBoard.printGameBoard(myObj);
 
             int userIn = in.nextInt(); // TAKES USER INPUT
-            int compIn = rand.nextInt(upperbound);
+            int compIn = CheckStatus.randomNumberGen(cc); // RANDOM NUMBER SELECTED BY THE COMPUTER
+
+
+
+            CheckStatus.numberChoices(cc,userIn,compIn);
 
             switch (userIn) {
 
