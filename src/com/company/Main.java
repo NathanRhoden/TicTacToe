@@ -18,7 +18,7 @@ public class Main {
 
         while(true) {
 
-
+            GameBoard.printGameBoard(myObj);
 
             int userIn = in.nextInt(); // TAKES USER INPUT
             int compIn = CheckStatus.randomNumberGen(cc); // RANDOM NUMBER SELECTED BY THE COMPUTER

@@ -50,42 +50,42 @@ public class CheckStatus {
 
         }
         //PLAYER 2 COMBINATION WINS
-        if(gameboard[0][0]  == 'O' && gameboard[0][2] == 'X' && gameboard[0][4] =='O')
+        if(gameboard[0][0]  == 'O' && gameboard[0][2] == 'O' && gameboard[0][4] =='O')
         {
             System.out.println("PLAYER 2 WINS");
 
         }
-        else if(gameboard[0][0]  == 'O' && gameboard[2][0] == 'X' && gameboard[4][0] =='0')
+        else if(gameboard[0][0]  == 'O' && gameboard[2][0] == '0' && gameboard[4][0] =='0')
         {
             System.out.println("PLAYER 2 WINS");
 
         }
-        else if(gameboard[0][0]  == 'O' && gameboard[2][2] == 'X' && gameboard[4][4] =='O')
+        else if(gameboard[0][0]  == 'O' && gameboard[2][2] == '0' && gameboard[4][4] =='O')
         {
             System.out.println("PLAYER 2 WINS");
 
         }
-        else if(gameboard[2][0]  == 'O' && gameboard[2][2] == 'X' && gameboard[2][4] =='0')
+        else if(gameboard[2][0]  == 'O' && gameboard[2][2] == '0' && gameboard[2][4] =='0')
         {
             System.out.println("PLAYER 2 WINS");
 
         }
-        else if(gameboard[4][0]  == 'O' && gameboard[4][2] == 'X' && gameboard[4][4] =='0')
+        else if(gameboard[4][0]  == 'O' && gameboard[4][2] == '0' && gameboard[4][4] =='0')
         {
             System.out.println("PLAYER 2 WINS");
 
         }
-        else if(gameboard[0][2]  == 'O' && gameboard[2][2] == 'X' && gameboard[4][2] =='0')
+        else if(gameboard[0][2]  == 'O' && gameboard[2][2] == '0' && gameboard[4][2] =='0')
         {
             System.out.println("PLAYER 2 WINS");
 
         }
-        else if(gameboard[0][4]  == 'O' && gameboard[2][4] == 'X' && gameboard[4][4] =='0')
+        else if(gameboard[0][4]  == 'O' && gameboard[2][4] == '0' && gameboard[4][4] =='0')
         {
             System.out.println("PLAYER 2 WINS");
 
         }
-        else if(gameboard[0][4]  == 'X' && gameboard[2][2] == 'X' && gameboard[4][0] =='0')
+        else if(gameboard[0][4]  == 'X' && gameboard[2][2] == 'O' && gameboard[4][0] =='0')
         {
             System.out.println("PLAYER 2 WINS");
 
@@ -103,7 +103,7 @@ public class CheckStatus {
             if(compIn == array[i]){
                 array[i]= 0;
             }
-            System.out.print(array[i] + " ");
+
         }
         return array;
     }
@@ -115,13 +115,13 @@ public class CheckStatus {
         int numberSelect = rand1.nextInt(array.length);
         int num = (array[numberSelect]);
 
-        if(num == 0 ){ // WILL REDO SELECTION IF IT LANDS ON ZERO
+        while(num == 0){ // WILL KEEP CHOOSING UNTIL IT DOES NOT HIT ZERO
+
             numberSelect = rand1.nextInt(array.length);
             num = (array[numberSelect]);
-
         }
 
-        System.out.println(num);
+
 
 
         return num;
