@@ -55,58 +55,69 @@ public class CheckStatus {
             System.out.println("PLAYER 2 WINS");
 
         }
-        else if(gameboard[0][0]  == 'O' && gameboard[2][0] == '0' && gameboard[4][0] =='0')
+        else if(gameboard[0][0]  == 'O' && gameboard[2][0] == 'O' && gameboard[4][0] =='O')
         {
             System.out.println("PLAYER 2 WINS");
 
         }
-        else if(gameboard[0][0]  == 'O' && gameboard[2][2] == '0' && gameboard[4][4] =='O')
+        else if(gameboard[0][0]  == 'O' && gameboard[2][2] == 'O' && gameboard[4][4] =='O')
         {
             System.out.println("PLAYER 2 WINS");
 
         }
-        else if(gameboard[2][0]  == 'O' && gameboard[2][2] == '0' && gameboard[2][4] =='0')
+        else if(gameboard[2][0]  == 'O' && gameboard[2][2] == 'O' && gameboard[2][4] =='O')
         {
             System.out.println("PLAYER 2 WINS");
 
         }
-        else if(gameboard[4][0]  == 'O' && gameboard[4][2] == '0' && gameboard[4][4] =='0')
+        else if(gameboard[4][0]  == 'O' && gameboard[4][2] == 'O' && gameboard[4][4] =='O')
         {
             System.out.println("PLAYER 2 WINS");
 
         }
-        else if(gameboard[0][2]  == 'O' && gameboard[2][2] == '0' && gameboard[4][2] =='0')
+        else if(gameboard[0][2]  == 'O' && gameboard[2][2] == 'O' && gameboard[4][2] =='O')
         {
             System.out.println("PLAYER 2 WINS");
 
         }
-        else if(gameboard[0][4]  == 'O' && gameboard[2][4] == '0' && gameboard[4][4] =='0')
+        else if(gameboard[0][4]  == 'O' && gameboard[2][4] == 'O' && gameboard[4][4] =='O')
         {
             System.out.println("PLAYER 2 WINS");
 
         }
-        else if(gameboard[0][4]  == 'X' && gameboard[2][2] == 'O' && gameboard[4][0] =='0')
+        else if(gameboard[0][4]  == 'O' && gameboard[2][2] == 'O' && gameboard[4][0] =='O')
         {
             System.out.println("PLAYER 2 WINS");
-
 
         }
     }
 
 
-   public static int[] numberChoices(int[] array, int userIn,int compIn){ //TURNS NUMBERS CHOSEN IN THE ARRAY TO 0 WHEN CHOSEN
+   public static int[] numberChoicesUser(int[] array, int userIn){ //TURNS NUMBERS CHOSEN IN THE ARRAY TO 0 WHEN CHOSEN
 
         for(int i = 0 ; i < array.length; i++){
+
             if(userIn == array[i]){
                 array[i] = 0;
-            }
-            if(compIn == array[i]){
-                array[i]= 0;
             }
 
         }
         return array;
     }
+
+     public static int[] numberChoicesComp(int[] array , int compIn){
+
+         for(int i = 0 ; i < array.length; i++) {
+
+             if (compIn == array[i]) {
+                 array[i] = 0;
+             }
+
+
+         }
+         return array;
+
+     }
 
     public static int randomNumberGen(int[] array){ //SELECTS RANDOM ELEMENT IF IT SELECTS 0 IT WILL SELECT AGAIN
 
@@ -121,21 +132,11 @@ public class CheckStatus {
             num = (array[numberSelect]);
         }
 
-
+        System.out.println(num);
 
 
         return num;
-
-
-
-
-
     }
-
-
-
-
-
 
 
 }

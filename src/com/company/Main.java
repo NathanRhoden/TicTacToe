@@ -21,11 +21,10 @@ public class Main {
             GameBoard.printGameBoard(myObj);
 
             int userIn = in.nextInt(); // TAKES USER INPUT
+            CheckStatus.numberChoicesUser(cc,userIn);
+
             int compIn = CheckStatus.randomNumberGen(cc); // RANDOM NUMBER SELECTED BY THE COMPUTER
-
-
-
-            CheckStatus.numberChoices(cc,userIn,compIn);
+            CheckStatus.numberChoicesComp(cc,compIn);
 
             switch (userIn) {
 
