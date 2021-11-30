@@ -91,8 +91,6 @@ public class CheckStatus {
 
         }
     }
-
-
    public static int[] numberChoicesUser(int[] array, int userIn){ //TURNS NUMBERS CHOSEN IN THE ARRAY TO 0 WHEN CHOSEN
 
         for(int i = 0 ; i < array.length; i++){
